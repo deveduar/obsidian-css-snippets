@@ -1,0 +1,116 @@
+/* Callouts for Omnivore Highlights */
+
+.callout[data-callout="yellow"] {
+
+--callout-color: 244, 188, 91;
+
+}
+
+.callout[data-callout="red"] {
+
+--callout-color: var(--callout-error);
+
+}
+
+.callout[data-callout="green"] {
+
+--callout-color: var(--callout-success);
+
+}
+
+.callout[data-callout="blue"] {
+
+--callout-color: var(--callout-info);
+
+}
+
+/* clase añadida con dataviewjs para contar tasks */
+.vista-row {
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* border: none; */
+    /* border-collapse: collapse; */
+    display: inline-block; 
+    margin-right: 10px;
+    /* white-space: nowrap; */
+    /* background-color: aqua; */
+    
+}
+
+/* clase añadida con dataviewjs mostrar resumen de tags */
+.mostrar-tags span a {
+  /* background-color: white; */
+  margin-top: 0.8em;
+  /* margin: 10px 10px 10px 10px; */
+  display: inline-block;
+  /* padding: 10px 20px 10px 10px; */
+  text-overflow: ellipsis;
+  
+
+}
+
+.mostrar-tags span {
+  /* display: inline-block; */
+  position: relative;
+  /* align-items: center; */
+  /* text-align: center; */
+  /* margin-left: 25px; */
+  /* padding-left: 10px; */
+  /* background-color: aliceblue; */
+  display: block; /* Para que el margin funcione */
+  margin: 10px; /* Margen automático a izquierda y derecha */
+
+}
+
+
+/* para mostrar agrupados por status con dataviewjs */
+.omni-title {
+  /* background-color: red; */
+  /* text-align: center; */
+  font-size: 1em;
+  margin-left: 15px;
+}
+
+.omni-par {
+  /* background-color: red; */
+  white-space: nowrap;
+}
+
+.omni-par li:hover {
+  /* background-color: red; */
+   white-space: normal; /* Permitir saltos de línea */
+  overflow: visible; /* Mostrar todo el texto */
+  text-overflow: unset; /* No truncar el texto */
+}
+
+.omni-par ul {
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  /* padding-left: 20px; */
+}
+
+p.omni-par {
+  margin-bottom: 0.2rem;
+  margin-top: 0.2rem;
+  
+}
+
+/* texto extrayendo higlights de dataview */
+.omni-pr p code{
+  /* background-color: red; */
+  font-size: 0.7em;
+  /* display: inline-block; */
+  line-height: 1.9;
+}
+
+.omni-pr p, .omni-pr li{
+  line-height: 1.5;
+   /* white-space: nowrap; */
+}
+
+.omni-pr p:hover, .omni-pr li:hover {
+  /* background-color: red; */
+   white-space: normal; /* Permitir saltos de línea */
+  overflow: visible; /* Mostrar todo el texto */
+  text-overflow: unset; /* No truncar el texto */
+}

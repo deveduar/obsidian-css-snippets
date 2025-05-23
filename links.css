@@ -1,0 +1,135 @@
+/* ============================================= */
+/* REMOVER SUBRAYADO DE ENLACES (GLOBAL) */
+/* ============================================= */
+
+/* Enlaces internos en editor (source mode) */
+.cm-hmd-internal-link .cm-underline,
+.markdown-source-view .internal-link,
+.cm-underline {
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en editor */
+.cm-url,
+.cm-url .cm-underline,
+.external-link,
+.cm-hmd-external-link {
+    text-decoration: none !important;
+}
+
+/* Enlaces en vista previa (preview mode) */
+.markdown-preview-view .internal-link,
+.markdown-preview-view .external-link {
+    text-decoration: none !important;
+}
+
+/* ============================================= */
+/* TU CÓDIGO ACTUAL MODIFICADO (sin subrayados) */
+/* ============================================= */
+
+/* Regla maestra para enlaces en listas */
+.cm-line .cm-hmd-internal-link,
+.cm-line .internal-link,
+.cm-line .cm-underline {
+    color: rgb(249, 165, 255) !important;
+    transition: none !important;
+    text-decoration: none !important; /* Aseguramos que no tenga subrayado */
+}
+
+/* Estado activo */
+.cm-active .cm-hmd-internal-link,
+.cm-active .internal-link {
+    color: rgb(249, 165, 255) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en el editor */
+.external-link, .cm-hmd-external-link, 
+.cm-link .cm-underline, .cm-link, 
+.cm-url .cm-underline, .cm-url {
+    color: rgb(162, 200, 233) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces internos en vista previa */
+.markdown-preview-view .internal-link {
+    color: rgb(226, 169, 251) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en vista previa */
+.markdown-preview-view .external-link {
+    color: rgba(159, 221, 226, 0.986) !important;
+    text-decoration: none;
+}
+
+
+
+/* Estilo para los enlaces con el formato específico vscode y files */
+
+.markdown-source-view a[href^="file://"] {
+    color: rgb(165, 234, 165) !important;
+    text-decoration: none;
+}
+
+.markdown-preview-view a[href^="file://"] {
+    color: rgb(134, 218, 134) !important;
+    text-decoration: none;
+}
+
+/* Estilo para los enlaces con el formato específico zotero collections */
+
+.markdown-source-view a[href^="zotero://select/library/collections/"] {
+    color: rgb(244, 244, 144) !important;
+    text-decoration: none;
+}
+
+.markdown-preview-view a[href^="zotero://select/library/collections/"] {
+    color: rgb(244, 244, 144) !important;
+    text-decoration: none;
+}
+
+/* Estilo enlaces zotero items */
+.markdown-source-view a[href^="zotero://select/library/items/"] {
+    color: rgb(244, 196, 144) !important;
+    text-decoration: none;
+}
+
+.markdown-preview-view a[href^="zotero://select/library/items/"] {
+    color: rgb(244, 196, 144) !important;
+    text-decoration: none;
+}
+
+/* Estilo para los iconos zotero collections*/
+.markdown-source-view a[href^="zotero://select/library/collections/"]::after,
+.markdown-preview-view a[href^="zotero://select/library/collections/"]::after {
+    content: "📚";
+    /* Unicode para el emoji de mano señalando hacia la derecha */
+    margin-left: 5px;
+    /* Espacio entre el enlace y el emoji */
+    color: rgb(244, 244, 144) !important;
+    text-decoration: none;
+}
+
+/* Estilo para los iconos zotero items*/
+.markdown-source-view a[href^="zotero://select/library/items/"]::after,
+.markdown-preview-view a[href^="zotero://select/library/items/"]::after {
+    content: "📕";
+    /* Unicode para el emoji de mano señalando hacia la derecha */
+    margin-left: 5px;
+    /* Espacio entre el enlace y el emoji */
+    color: rgb(244, 244, 144) !important;
+    text-decoration: none;
+}
+
+/* Estilo para los iconos vscode y files */
+.markdown-source-view a[href^="file://"]::after,
+.markdown-preview-view a[href^="file://"]::after {
+    content: "💻";
+    /* Unicode para el emoji de computadora */
+    margin-left: 5px;
+    /* Espacio entre el enlace y el emoji */
+    color: rgb(165, 234, 165) !important;
+    /* Color para el enlace en el modo de edición */
+    text-decoration: none;
+}

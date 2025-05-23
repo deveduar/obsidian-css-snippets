@@ -1,0 +1,4 @@
+/* Ocultar el ícono de marcador en la barra de pestañas */
+.mod-bookmark.mod-bookmarked.mod-filled {
+    display: none !important;
+}

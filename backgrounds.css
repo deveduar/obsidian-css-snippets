@@ -1,0 +1,32 @@
+/* Background color for notes */
+
+.fondo-blue {
+    /* background-color: rgb(8, 9, 24); */
+    background-color: rgb(45, 45, 52);
+}
+
+.fondo-pastel {
+    background-color: rgba(45, 59, 63, 0.988);
+    filter: invert(1);
+    color: hsl(0, 0%, 100%);
+}
+
+.fondo-pastel .markdown-embed,.fondo-pastel .callout, .fondo-pastel .metadata-content, .fondo-pastel .HyperMD-quote, .fondo-pastel .edit-block-button,  .fondo-pastel .code-styler-line, .fondo-pastel .code-styler-header-container,.fondo-pastel .code-styler-pre {
+    filter: invert(1) !important;
+    background-color: rgb(17, 15, 15) !important;
+
+}
+
+/* .fondo-dark {
+background: rgb(0, 0, 0);
+background: rgb(10, 9, 9);
+    background: -moz-linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
+    background: -webkit-linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
+    background: linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0909", endColorstr="#0a0909", GradientType=1);
+
+} */
+
+.fondo-dark {
+background: rgb(0, 0, 0);
+}

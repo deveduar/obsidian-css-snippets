@@ -1,0 +1,37 @@
+/* tamaño de los tags */
+td .tag, li .tag, p .tag {
+    font-size: 0.6em !important;
+    white-space: nowrap;
+    
+}
+
+/* Ocultar headers de links embebidos */
+.hide-embedded-header1 .markdown-embed h3,
+.hide-embedded-header1 .markdown-embed h2,
+.hide-embedded-header1 .markdown-embed h1 {
+    display: none;
+}
+
+/* ocultar titulo nombre de archivo */
+.hide-titulo .inline-title {
+    display: none;
+}
+
+/* Ocultar bordes, espacios y fondo de links embebidos con clase personalizada */
+/* ya no usado */
+.hide-linea-espacios .markdown-embed {
+    border-left: none;
+    padding: 0;
+    background-color: rgba(20, 18, 20, 0.986);
+    border: 0.1em solid #373634;
+}
+
+/* Ocultar properties */
+.workspace-leaf-content[data-mode="preview"] .markdown-preview-view.hide_properties .metadata-container {
+    display: none;
+}
+
+/* Tamaño de vista */
+.wide {
+    --file-line-width: 1000px;
+}

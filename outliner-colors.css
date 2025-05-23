@@ -1,0 +1,22 @@
+/* Recursive font colors for headers in the outline pane list */
+.tree-item > .tree-item-self {
+    color: #ff9af0; /* Level 1 color */
+  }
+  
+  .tree-item > .tree-item-children > .tree-item > .tree-item-self {
+    color: #fbdec1; /* Level 2 color */
+  }
+  
+  div.tree-item > div.tree-item-children > div.tree-item > div.tree-item-children > div.tree-item > div.tree-item-self {
+    color: #cad1cf; /* Level 3 color */
+  }
+
+  div.tree-item > div.tree-item-children > div.tree-item > div.tree-item-children > div.tree-item > .tree-item-children > .tree-item > .tree-item-self {
+    color: #f872fd; /* Level 4 color */
+  }
+
+  div.tree-item > div.tree-item-children > div.tree-item > div.tree-item-children > div.tree-item > .tree-item-children > .tree-item > .tree-item-children > .tree-item > .tree-item-self {
+    color: #ff6bd3; /* Level 5 color */
+  }
+  
+  /* Add more levels as needed */
