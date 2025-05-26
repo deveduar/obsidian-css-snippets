@@ -180,17 +180,92 @@ div.cm-line > span.dataview.dataview-inline .tag {
 }
 
 
-/* nube de tags */
-.mostrar-tags {
-    line-height: 1.8;
-    margin: 1em 0;
-    padding: 10px;
-    background: var(--background-secondary);
-    border-radius: 8px;
-    word-break: break-word;
+
+
+
+
+
+
+
+/* Reset completo para tags dentro del contenedor */
+.tag-cloud-wrapper .tag.tag-cloud-reset {
+  all: initial !important; /* Reset total */
+  font-family: inherit !important;
+  font-size: inherit !important;
+  color: inherit !important;
+  display: inline-block !important;
+  padding: 0 8px !important;
+  margin: 0 4px 4px 0 !important;
+  border-radius: 12px !important;
+  background: var(--background-primary-alt) !important;
+  color: var(--text-normal) !important;
+  text-decoration: none !important;
+  line-height: 1.8 !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
+/* Hover state */
+.tag-cloud-wrapper .tag.tag-cloud-reset:hover {
+  background: var(--interactive-accent) !important;
+  color: var(--text-on-accent) !important;
+  transform: scale(1.05) !important;
+}
 
+/* Estilos para el contenedor */
+.tag-cloud-wrapper {
+  margin: 1.5em 0;
+  padding: 15px;
+  background: var(--background-secondary);
+  border-radius: 8px;
+}
+
+/* Lista de tags */
+.tag-cloud-reset-list {
+  columns: 3;
+  column-gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.tag-cloud-reset-list li {
+  margin-bottom: 8px;
+  break-inside: avoid;
+}
+
+/* Contador */
+.tag-count {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  margin-left: 3px;
+}
+
+/* Estilos para el mensaje cuando no hay tags */
+.no-tags-message {
+  padding: 15px;
+  background: var(--background-secondary-alt);
+  border-radius: 8px;
+  border-left: 4px solid var(--interactive-accent);
+  color: var(--text-muted);
+}
+
+.no-tags-message p:first-child {
+  margin-top: 0;
+  color: var(--text-normal);
+  font-weight: bold;
+}
+
+.no-tags-message ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.no-tags-message li {
+  margin-bottom: 4px;
+}
 
 
 
@@ -377,3 +452,49 @@ div.cm-line > span.dataview.dataview-inline .tag {
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* NEGRITAS ROJAS (solo bold) */
+.cm-strong, 
+.markdown-preview-view strong, 
+.cm-formatting-strong {
+  color: #cb8585 !important; /* Rojo intenso */
+  font-weight: bold !important;
+}
+
+/* CURSIVAS (azul) */
+.cm-em, 
+.markdown-preview-view em, 
+.cm-formatting-em {
+  color: #4dabf7 !important; /* Azul claro */
+  font-style: italic !important;
+}
+
+/* CÓDIGO EN LÍNEA (verde) */
+.cm-inline-code, 
+.markdown-preview-view code {
+  color: #40c057 !important; /* Verde */
+  background-color: rgba(64, 192, 87, 0.1) !important;
+  border-radius: 3px;
+  font-family: var(--font-monospace);
+}
+
+
+/* LISTAS (naranja) */
+.cm-formatting-list {
+  color: #ff922b !important; /* Naranja */
+}
+
+/* BLOQUES DE CÓDIGO (fondo oscuro) */
+/* .markdown-preview-view pre code {
+  background-color: #2b2b2b !important;
+  color: #f8f9fa !important;
+} */
