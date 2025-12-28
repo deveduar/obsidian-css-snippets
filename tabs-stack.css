@@ -1,0 +1,66 @@
+/* ---------- Contenedor principal: permitir wrap + scroll ---------- */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header-container {
+	height: auto !important;
+	display: flex !important;
+	align-items: flex-start !important;
+	overflow-y: auto !important; /* permite scroll si hay más filas */
+	scrollbar-width: thin; /* scrollbar discreto */
+	scrollbar-color: var(--scrollbar-thumb) var(--background-primary);
+	padding-bottom: 4px !important;
+}
+
+/* Inner: wrap con límite visual de dos filas */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header-container-inner {
+	display: flex !important;
+	flex-wrap: wrap !important;
+	gap: 4px 6px !important;
+	align-items: center !important;
+	padding: 4px 3px !important;
+	min-height: 0 !important;
+	max-height: calc(var(--header-height) * 2 + 8px) !important; /* dos filas visibles */
+	overflow-y: auto !important; /* habilita scroll si hay más */
+}
+
+/* Cada pestaña: un poco más compacta */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header {
+	flex: 0 0 auto !important;
+	min-width: 0 !important;
+	max-width: none !important;
+	border-radius: 4px !important;
+	padding: 2px 6px !important;
+	margin: 0 !important;
+	white-space: nowrap !important;
+	font-size: 0.9em !important;
+}
+
+/* Inner interno (iconos/título) */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header-inner {
+	display: inline-flex !important;
+	align-items: center !important;
+	gap: 4px !important;
+}
+
+/* Sin línea separadora */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header-inner::after {
+	background: transparent !important;
+}
+
+/* Sin sombras decorativas */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header.is-active::before,
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header.is-active::after {
+	box-shadow: none !important;
+}
+
+/* Botón cerrar: siempre visible y discreto */
+.workspace-split.mod-root .workspace-tabs .workspace-tab-header-inner-close-button {
+	display: inline-flex !important;
+	opacity: 0.75 !important;
+	pointer-events: auto !important;
+	scale: 0.9;
+}
+
+/* Mantener altura máxima de los botones globales */
+.workspace-split.mod-root .workspace-tab-header-container > :not(.workspace-tab-header-container-inner) {
+	max-height: var(--header-height) !important;
+	overflow: visible !important;
+}

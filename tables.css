@@ -325,8 +325,8 @@ div.cm-line > span.dataview.dataview-inline .tag {
 
 
 
-/* === COMPACT HEADINGS EN MODO LIVE PREVIEW (nuevo editor CM6) === */
-.markdown-source-view.mod-cm6 .HyperMD-header-1,
+/* === COMPACT HEADINGS EN MODO LIVE PREVIEW (CM6) === */
+/* .markdown-source-view.mod-cm6 .HyperMD-header-1,
 .markdown-source-view.mod-cm6 .HyperMD-header-2,
 .markdown-source-view.mod-cm6 .HyperMD-header-3,
 .markdown-source-view.mod-cm6 .HyperMD-header-4,
@@ -335,8 +335,12 @@ div.cm-line > span.dataview.dataview-inline .tag {
   line-height: 1.2 !important;
   margin-top: 0.2em !important;
   margin-bottom: 0.1em !important;
-  padding: 0 !important;
-}
+  padding: 0.1em 0.2em !important; 
+  pointer-events: auto !important; 
+  user-select: text !important;    
+} */
+
+
 
 /* Colores y tamaños específicos */
 .markdown-source-view.mod-cm6 .HyperMD-header-1 { font-size: 1.3em !important; color: #ffffff !important; }
