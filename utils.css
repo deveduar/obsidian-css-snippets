@@ -31,7 +31,4 @@ td .tag, li .tag, p .tag {
     display: none;
 }
 
-/* Tamaño de vista */
-.wide {
-    --file-line-width: 1000px;
-}
+

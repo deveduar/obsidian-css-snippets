@@ -1,0 +1,4 @@
+/* Tamaño de vista */
+* {
+    --file-line-width: 1000px;
+}
