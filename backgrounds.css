@@ -1,11 +1,10 @@
 /* Background color for notes */
 
-.fondo-blue {
-    /* background-color: rgb(8, 9, 24); */
+/* .fondo-blue {
     background-color: rgb(45, 45, 52);
-}
+} */
 
-.fondo-pastel {
+/* .fondo-pastel {
     background-color: rgba(45, 59, 63, 0.988);
     filter: invert(1);
     color: hsl(0, 0%, 100%);
@@ -15,7 +14,7 @@
     filter: invert(1) !important;
     background-color: rgb(17, 15, 15) !important;
 
-}
+} */
 
 /* .fondo-dark {
 background: rgb(0, 0, 0);
@@ -27,6 +26,152 @@ background: rgb(10, 9, 9);
 
 } */
 
-.fondo-dark {
+/* .fondo-dark {
 background: rgb(0, 0, 0);
+} */
+
+
+/* cream */
+.theme-light {
+    --background-primary: #FFF9F0;
+    --background-secondary: #FDF0E0;
+    --background-primary-alt: #FFFFF5;
+    --background-secondary-alt: #F7E8D4;
+}
+
+/* pico 8 rose */
+/* .theme-light {
+    --background-primary: #FFF1E8; 
+    --background-secondary: #FFE4D5; 
+    --background-primary-alt: #FFFFFF;
+    --background-secondary-alt: #FFEAD8;
+} */
+
+/* green */
+/* .theme-light {
+    --background-primary: #bcfbbc; 
+    --background-secondary: #cffecf; 
+    --background-primary-alt: #b9f7b9;
+    --background-secondary-alt: #f9fff9;
+} */
+
+.theme-light {
+    --background-primary: #FFF9FB;  /* Rosa translúcido */
+    --background-secondary: #FEF0F0; /* Rosa algodón de azúcar */
+    --background-primary-alt: #FFFFFF;
+    --background-secondary-alt: #FCE8E8;
+}
+
+.theme-light {
+    --background-primary: #FCF8F0;  /* Papel reciclado */
+    --background-secondary: #F2ECE0; /* Cartulina tostada */
+    --background-primary-alt: #FFFDF5;
+    --background-secondary-alt: #ECE2D2;
+}
+
+
+/* ============================================
+   TEMA OSCURO -
+   Headings: h1 blanco, h2 naranja, h3 amarillo,
+             h4 verde, h5 cian, h6 gris
+   ============================================ */
+
+.theme-dark {
+    /* Paleta base Lospec */
+    --background-primary: #1F262B;
+    --background-secondary: #151A1F;
+    --background-primary-alt: #293239;
+    --background-secondary-alt: #1C2228;
+    
+    /* Colores de headings (modo oscuro) */
+    --heading-h1: #ffffff;      /* Blanco puro */
+    --heading-h2: #faa672;      /* Naranja quemado */
+    --heading-h3: #f3d975;      /* Amarillo oro */
+    --heading-h4: #8ab776;      /* Verde manzana */
+    --heading-h5: #a2ccd5;      /* Cian suave */
+    --heading-h6: #c5c3c3;      /* Gris medio */
+}
+
+/* Aplicación de colores a los headings */
+.theme-dark .cm-header-1,
+.theme-dark .markdown-preview-view h1 {
+    color: var(--heading-h1) !important;
+}
+
+.theme-dark .cm-header-2,
+.theme-dark .markdown-preview-view h2 {
+    color: var(--heading-h2) !important;
+}
+
+.theme-dark .cm-header-3,
+.theme-dark .markdown-preview-view h3 {
+    color: var(--heading-h3) !important;
+}
+
+.theme-dark .cm-header-4,
+.theme-dark .markdown-preview-view h4 {
+    color: var(--heading-h4) !important;
+}
+
+.theme-dark .cm-header-5,
+.theme-dark .markdown-preview-view h5 {
+    color: var(--heading-h5) !important;
+}
+
+.theme-dark .cm-header-6,
+.theme-dark .markdown-preview-view h6 {
+    color: var(--heading-h6) !important;
+}
+
+/* ============================================
+   TEMA CLARO - Leche y Galleta (Lospec)
+   Headings: h1 gris oscuro, h2 naranja, h3 dorado,
+             h4 verde, h5 azul, h6 gris claro
+   ============================================ */
+
+.theme-light {
+    /* Paleta base Lospec */
+    --background-primary: #fff7f7f0;
+    --background-secondary: #fffcf7;
+    --background-primary-alt: #FFF9F2;
+    --background-secondary-alt: #EFE5D5;
+    
+    /* Colores de headings (modo claro) */
+    --heading-h1: #2C3E50;      /* Gris azulado oscuro */
+    --heading-h2: #ff2982;      /* Naranja intenso */
+    --heading-h3: #d11bf1;      /* Dorado */
+    --heading-h4: #2761ae;      /* Verde esmeralda */
+    --heading-h5: #29b9b2;      /* Azul medio */
+    --heading-h6: #7F8C8D;      /* Gris pizarra */
+}
+
+/* Aplicación de colores a los headings */
+.theme-light .cm-header-1,
+.theme-light .markdown-preview-view h1 {
+    color: var(--heading-h1) !important;
+}
+
+.theme-light .cm-header-2,
+.theme-light .markdown-preview-view h2 {
+    color: var(--heading-h2) !important;
+}
+
+.theme-light .cm-header-3,
+.theme-light .markdown-preview-view h3 {
+    color: var(--heading-h3) !important;
+}
+
+.theme-light .cm-header-4,
+.theme-light .markdown-preview-view h4 {
+    color: var(--heading-h4) !important;
+}
+
+.theme-light .cm-header-5,
+.theme-light .markdown-preview-view h5 {
+    color: var(--heading-h5) !important;
+}
+
+.theme-light .cm-header-6,
+.theme-light .markdown-preview-view h6 {
+    color: var(--heading-h6) !important;
 }
