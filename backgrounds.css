@@ -175,3 +175,26 @@ background: rgb(0, 0, 0);
 .theme-light .markdown-preview-view h6 {
     color: var(--heading-h6) !important;
 }
+
+/* ============================================
+   HR de MARKDOWN (---) SOLO en notas
+   SIN afectar a la interfaz de Obsidian
+   ============================================ */
+
+/* Modo oscuro - Solo para --- en notas */
+.theme-dark .markdown-preview-view hr,
+.theme-dark .cm-line hr {
+    border: none;
+    height: 1px;
+    background-color: #5a6e7a9c;
+    margin: 12px 0;
+}
+
+/* Modo claro - Solo para --- en notas */
+.theme-light .markdown-preview-view hr,
+.theme-light .cm-line hr {
+    border: none;
+    height: 1px;
+    background-color: #b0a090d3;
+    margin: 12px 0;
+}
