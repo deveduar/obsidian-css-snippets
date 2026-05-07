@@ -1,79 +1,5 @@
-/* Background color for notes */
-
-/* .fondo-blue {
-    background-color: rgb(45, 45, 52);
-} */
-
-/* .fondo-pastel {
-    background-color: rgba(45, 59, 63, 0.988);
-    filter: invert(1);
-    color: hsl(0, 0%, 100%);
-}
-
-.fondo-pastel .markdown-embed,.fondo-pastel .callout, .fondo-pastel .metadata-content, .fondo-pastel .HyperMD-quote, .fondo-pastel .edit-block-button,  .fondo-pastel .code-styler-line, .fondo-pastel .code-styler-header-container,.fondo-pastel .code-styler-pre {
-    filter: invert(1) !important;
-    background-color: rgb(17, 15, 15) !important;
-
-} */
-
-/* .fondo-dark {
-background: rgb(0, 0, 0);
-background: rgb(10, 9, 9);
-    background: -moz-linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
-    background: -webkit-linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
-    background: linear-gradient(121deg, rgba(10, 9, 9, 1) 62%, rgba(10, 9, 9, 1) 91%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0909", endColorstr="#0a0909", GradientType=1);
-
-} */
-
-/* .fondo-dark {
-background: rgb(0, 0, 0);
-} */
-
-
-/* cream */
-.theme-light {
-    --background-primary: #FFF9F0;
-    --background-secondary: #FDF0E0;
-    --background-primary-alt: #FFFFF5;
-    --background-secondary-alt: #F7E8D4;
-}
-
-/* pico 8 rose */
-/* .theme-light {
-    --background-primary: #FFF1E8; 
-    --background-secondary: #FFE4D5; 
-    --background-primary-alt: #FFFFFF;
-    --background-secondary-alt: #FFEAD8;
-} */
-
-/* green */
-/* .theme-light {
-    --background-primary: #bcfbbc; 
-    --background-secondary: #cffecf; 
-    --background-primary-alt: #b9f7b9;
-    --background-secondary-alt: #f9fff9;
-} */
-
-.theme-light {
-    --background-primary: #FFF9FB;  /* Rosa translúcido */
-    --background-secondary: #FEF0F0; /* Rosa algodón de azúcar */
-    --background-primary-alt: #FFFFFF;
-    --background-secondary-alt: #FCE8E8;
-}
-
-.theme-light {
-    --background-primary: #FCF8F0;  /* Papel reciclado */
-    --background-secondary: #F2ECE0; /* Cartulina tostada */
-    --background-primary-alt: #FFFDF5;
-    --background-secondary-alt: #ECE2D2;
-}
-
-
 /* ============================================
    TEMA OSCURO -
-   Headings: h1 blanco, h2 naranja, h3 amarillo,
-             h4 verde, h5 cian, h6 gris
    ============================================ */
 
 .theme-dark {
@@ -90,6 +16,14 @@ background: rgb(0, 0, 0);
     --heading-h4: #8ab776;      /* Verde manzana */
     --heading-h5: #a2ccd5;      /* Cian suave */
     --heading-h6: #c5c3c3;      /* Gris medio */
+
+    /* Colores para bold, italic, etc. */
+    --bold-color: #cb8585;      /* rojo suave */
+    --italic-color: #4dabf7;    /* azul claro */
+    --code-color: #40c057;      /* verde */
+    --list-bullet-color: #ff922b; /* naranja */
+
+    --table-border-color: #3b4851;
 }
 
 /* Aplicación de colores a los headings */
@@ -123,10 +57,23 @@ background: rgb(0, 0, 0);
     color: var(--heading-h6) !important;
 }
 
+/* Negritas, cursivas, código y listas (oscuro) */
+.theme-dark .cm-strong,
+.theme-dark .markdown-preview-view strong,
+.theme-dark .cm-formatting-strong { color: var(--bold-color) !important; font-weight: bold !important; }
+
+.theme-dark .cm-em,
+.theme-dark .markdown-preview-view em,
+.theme-dark .cm-formatting-em { color: var(--italic-color) !important; font-style: italic !important; }
+
+.theme-dark .cm-inline-code,
+.theme-dark .markdown-preview-view code { color: var(--code-color) !important; background-color: rgba(64, 192, 87, 0.1) !important; border-radius: 3px; }
+
+.theme-dark .cm-formatting-list { color: var(--list-bullet-color) !important; }
+
+
 /* ============================================
-   TEMA CLARO - Leche y Galleta (Lospec)
-   Headings: h1 gris oscuro, h2 naranja, h3 dorado,
-             h4 verde, h5 azul, h6 gris claro
+   TEMA CLARO
    ============================================ */
 
 .theme-light {
@@ -143,6 +90,14 @@ background: rgb(0, 0, 0);
     --heading-h4: #2761ae;      /* Verde esmeralda */
     --heading-h5: #29b9b2;      /* Azul medio */
     --heading-h6: #7F8C8D;      /* Gris pizarra */
+
+    /* Colores para bold, italic, etc. (adaptados para fondo claro) */
+    --bold-color: #b83c3c;      /* granate */
+    --italic-color: #1c6ea9;    /* azul intenso */
+    --code-color: #2b7e3a;      /* verde oscuro */
+    --list-bullet-color: #cc7b2c; /* naranja tostado */
+
+    --table-border-color: #b0a090; 
 }
 
 /* Aplicación de colores a los headings */
@@ -176,6 +131,20 @@ background: rgb(0, 0, 0);
     color: var(--heading-h6) !important;
 }
 
+/* Negritas, cursivas, código y listas (claro) */
+.theme-light .cm-strong,
+.theme-light .markdown-preview-view strong,
+.theme-light .cm-formatting-strong { color: var(--bold-color) !important; font-weight: bold !important; }
+
+.theme-light .cm-em,
+.theme-light .markdown-preview-view em,
+.theme-light .cm-formatting-em { color: var(--italic-color) !important; font-style: italic !important; }
+
+.theme-light .cm-inline-code,
+.theme-light .markdown-preview-view code { color: var(--code-color) !important; background-color: rgba(43, 126, 58, 0.08) !important; border-radius: 3px; }
+
+.theme-light .cm-formatting-list { color: var(--list-bullet-color) !important; }
+
 /* ============================================
    HR de MARKDOWN (---) SOLO en notas
    SIN afectar a la interfaz de Obsidian
@@ -197,4 +166,33 @@ background: rgb(0, 0, 0);
     height: 1px;
     background-color: #b0a090d3;
     margin: 12px 0;
+}
+
+/* ============================================
+   TABLAS NATIVAS DE OBSIDIAN (Markdown)
+   Bordes adaptables al tema con variable
+   ============================================ */
+
+/* Borde general de la tabla */
+.markdown-preview-view table,
+.markdown-source-view div.cm-table-widget table {
+    border-collapse: collapse;
+    margin: 1em 0;
+}
+
+/* Bordes de celdas (table y celdas) */
+.markdown-preview-view table,
+.markdown-preview-view th,
+.markdown-preview-view td,
+.markdown-source-view div.cm-table-widget table,
+.markdown-source-view div.cm-table-widget th,
+.markdown-source-view div.cm-table-widget td {
+    border: 1px solid var(--table-border-color, #ddd);
+}
+
+.markdown-preview-view th,
+.markdown-preview-view td,
+.markdown-source-view div.cm-table-widget th,
+.markdown-source-view div.cm-table-widget td {
+    padding: 6px 10px;
 }
