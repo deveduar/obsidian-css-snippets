@@ -24,6 +24,31 @@
     --list-bullet-color: #ff922b; /* naranja */
 
     --table-border-color: #3b4851;
+
+    /* Enlaces internos */
+    --link-internal-editor: #f9a5ff;
+    --link-internal-preview: #e2a9fb;
+    
+    /* Enlaces externos */
+    --link-external-editor: #a2c8e9;
+    --link-external-preview: #9fdde2;
+    
+    /* Enlaces file:// */
+    --link-file-editor: #a5eaa5;
+    --link-file-preview: #86da86;
+    --icon-file: #a5eaa5;
+    
+    /* Enlaces Zotero - colecciones */
+    --link-zotero-collections-editor: #f4f490;
+    --link-zotero-collections-preview: #f4f490;
+    --icon-zotero-collections: #f4f490;
+    
+    /* Enlaces Zotero - items */
+    --link-zotero-items-editor: #f4c490;
+    --link-zotero-items-preview: #f4c490;
+    --icon-zotero-items: #f4c490;
+
+    --hr-color: #5a6e7a9c; 
 }
 
 /* Aplicación de colores a los headings */
@@ -98,6 +123,31 @@
     --list-bullet-color: #cc7b2c; /* naranja tostado */
 
     --table-border-color: #b0a090; 
+
+    /* Enlaces internos */
+    --link-internal-editor: #7815b4;
+    --link-internal-preview: #8c3ce6;
+    
+    /* Enlaces externos */
+    --link-external-editor: #0066cc;
+    --link-external-preview: #0082c8;
+    
+    /* Enlaces file:// */
+    --link-file-editor: #009600;
+    --link-file-preview: #32b432;
+    --icon-file: #32b432;
+    
+    /* Enlaces Zotero - colecciones */
+    --link-zotero-collections-editor: #c8b400;
+    --link-zotero-collections-preview: #dcc832;
+    --icon-zotero-collections: #dcc832;
+    
+    /* Enlaces Zotero - items */
+    --link-zotero-items-editor: #c87800;
+    --link-zotero-items-preview: #e69632;
+    --icon-zotero-items: #e69632;
+
+    --hr-color: #b0a090d3; 
 }
 
 /* Aplicación de colores a los headings */
@@ -150,21 +200,12 @@
    SIN afectar a la interfaz de Obsidian
    ============================================ */
 
-/* Modo oscuro - Solo para --- en notas */
-.theme-dark .markdown-preview-view hr,
-.theme-dark .cm-line hr {
+/* Solo para los --- en notas (modo unificado) */
+.markdown-preview-view hr,
+.cm-line hr {
     border: none;
     height: 1px;
-    background-color: #5a6e7a9c;
-    margin: 12px 0;
-}
-
-/* Modo claro - Solo para --- en notas */
-.theme-light .markdown-preview-view hr,
-.theme-light .cm-line hr {
-    border: none;
-    height: 1px;
-    background-color: #b0a090d3;
+    background-color: var(--hr-color);
     margin: 12px 0;
 }
 
@@ -195,4 +236,122 @@
 .markdown-source-view div.cm-table-widget th,
 .markdown-source-view div.cm-table-widget td {
     padding: 6px 10px;
+}
+
+/* ========== REGLAS GLOBALES (sin subrayado) ========== */
+/* Enlaces internos en editor (source mode) */
+.cm-hmd-internal-link .cm-underline,
+.markdown-source-view .internal-link,
+.cm-underline {
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en editor */
+.cm-url,
+.cm-url .cm-underline,
+.external-link,
+.cm-hmd-external-link {
+    text-decoration: none !important;
+}
+
+/* Enlaces en vista previa (preview mode) */
+.markdown-preview-view .internal-link,
+.markdown-preview-view .external-link {
+    text-decoration: none !important;
+}
+
+/* ========== APLICACIÓN DE COLORES MEDIANTE VARIABLES ========== */
+/* Enlaces internos en editor */
+.cm-line .cm-hmd-internal-link,
+.cm-line .internal-link,
+.cm-line .cm-underline {
+    color: var(--link-internal-editor) !important;
+    transition: none !important;
+    text-decoration: none !important;
+}
+
+/* Estado activo (cursor sobre el enlace) */
+.cm-active .cm-hmd-internal-link,
+.cm-active .internal-link {
+    color: var(--link-internal-editor) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en editor */
+.external-link, .cm-hmd-external-link, 
+.cm-link .cm-underline, .cm-link, 
+.cm-url .cm-underline, .cm-url {
+    color: var(--link-external-editor) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces internos en vista previa */
+.markdown-preview-view .internal-link {
+    color: var(--link-internal-preview) !important;
+    text-decoration: none !important;
+}
+
+/* Enlaces externos en vista previa */
+.markdown-preview-view .external-link {
+    color: var(--link-external-preview) !important;
+    text-decoration: none;
+}
+
+/* ========== ENLACES ESPECIALES (file:// y zotero://) ========== */
+/* file:// - editor y preview */
+.markdown-source-view a[href^="file://"] {
+    color: var(--link-file-editor) !important;
+    text-decoration: none;
+}
+.markdown-preview-view a[href^="file://"] {
+    color: var(--link-file-preview) !important;
+    text-decoration: none;
+}
+
+/* Zotero - colecciones */
+.markdown-source-view a[href^="zotero://select/library/collections/"] {
+    color: var(--link-zotero-collections-editor) !important;
+    text-decoration: none;
+}
+.markdown-preview-view a[href^="zotero://select/library/collections/"] {
+    color: var(--link-zotero-collections-preview) !important;
+    text-decoration: none;
+}
+
+/* Zotero - items */
+.markdown-source-view a[href^="zotero://select/library/items/"] {
+    color: var(--link-zotero-items-editor) !important;
+    text-decoration: none;
+}
+.markdown-preview-view a[href^="zotero://select/library/items/"] {
+    color: var(--link-zotero-items-preview) !important;
+    text-decoration: none;
+}
+
+/* ========== ICONOS (pseudo-elementos) ========== */
+/* Icono para file:// */
+.markdown-source-view a[href^="file://"]::after,
+.markdown-preview-view a[href^="file://"]::after {
+    content: "💻";
+    margin-left: 5px;
+    color: var(--icon-file) !important;
+    text-decoration: none;
+}
+
+/* Icono para colecciones de Zotero */
+.markdown-source-view a[href^="zotero://select/library/collections/"]::after,
+.markdown-preview-view a[href^="zotero://select/library/collections/"]::after {
+    content: "📚";
+    margin-left: 5px;
+    color: var(--icon-zotero-collections) !important;
+    text-decoration: none;
+}
+
+/* Icono para items de Zotero */
+.markdown-source-view a[href^="zotero://select/library/items/"]::after,
+.markdown-preview-view a[href^="zotero://select/library/items/"]::after {
+    content: "📕";
+    margin-left: 5px;
+    color: var(--icon-zotero-items) !important;
+    text-decoration: none;
 }
